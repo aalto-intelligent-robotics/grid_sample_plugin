@@ -104,7 +104,7 @@ void GridSamplerNode::gridSampleCB(const grid_sample_msgs::GridSampleGoalConstPt
         geometry_msgs::Pose pose;
         transf t = mHand->getTran();
 
-        std::cout << "t: " << t << std::endl;
+        //std::cout << "t: " << t << std::endl;
         pose.position.x = t.translation().x() / 1000.0;
         pose.position.y = t.translation().y() / 1000.0;;
         pose.position.z = t.translation().z() / 1000.0;;

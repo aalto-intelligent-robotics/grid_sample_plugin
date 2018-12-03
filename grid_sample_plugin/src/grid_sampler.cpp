@@ -142,7 +142,7 @@ EllipseSampler::addCartesianSamples(const GraspPlanningState &seed, double beta,
         newState->getPosition()->getVariable("gamma")->setValue(gamma);
         newState->getPosition()->getVariable("beta")->setValue(beta);
         mSamples.push_back(newState);
-        std::cout << "new sample tran: " << newState->getPosition()->getCoreTran() << std::endl;
+        //std::cout << "new sample tran: " << newState->getPosition()->getCoreTran() << std::endl;
 }
 
 /*! Samples an ellipsoid by sampling uniformly a grid with the same aspect

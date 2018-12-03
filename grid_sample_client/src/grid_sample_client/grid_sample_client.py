@@ -58,8 +58,8 @@ class GridSampleClient(object):
             except:
                 volume_quality = -1
                 epsilon_quality = -1
-        
-            result = gc.getRobot(0)
+                continue        
+
             grasp = copy.deepcopy(pre_grasp)
             grasp.pose = robot_state.robot.pose
             grasp.volume_quality = volume_quality
