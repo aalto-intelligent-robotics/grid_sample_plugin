@@ -104,7 +104,7 @@ EllipseSampler::sample()
     seed.getPosition()->getVariable("dist")->setFixed(true);
 
     // set the dimension of the ellipse
-    double size = 2.5;
+    double size = 1.5;
     double aRes = size * halfX ;
     double bRes = size * halfY ;
     double cRes = size * halfZ ;
