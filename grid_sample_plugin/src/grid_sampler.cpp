@@ -126,10 +126,12 @@ EllipseSampler::gridEllipsoidSampling(const GraspPlanningState &seed)
 {
     double step = (2*M_PI) / mResolution;
 
-    double tau = M_PI/2.0;
+    //double tau = M_PI/2.0;
     for (double gamma=step; gamma<=(2*M_PI); gamma+=step) {
         for (double beta=(-M_PI/2); beta<=(M_PI/2); beta+=step) {
+           for (double tau=step; tau<=(2*M_PI); tau+=step) {
             addCartesianSamples(seed, beta, gamma, tau);
+           }
         }
     }
 }

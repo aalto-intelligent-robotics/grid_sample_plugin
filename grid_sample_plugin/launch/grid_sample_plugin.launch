@@ -1,3 +1,5 @@
 <launch>
+   <arg name="render" default="true"/>
+<param name="Render" value="$(arg render)"/>
   <node name="grid_sample_plugin" pkg="grid_sample_plugin" type="launch_graspit.sh" output="screen" />
 </launch>
