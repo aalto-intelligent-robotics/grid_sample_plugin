@@ -98,8 +98,13 @@ void GridSamplerNode::gridSampleCB(const grid_sample_msgs::GridSampleGoalConstPt
 
       for(int i = 0; i < samples->size(); i++)
       {
-          GraspPlanningState *gps = samples->at(i);
-        gps->execute(mHand);
+        GraspPlanningState *gps = samples->at(i);
+	gps->execute(mHand);
+
+	if(!mHand->getWorld()->noCollision(mHand))
+	{
+	    continue;
+	}
 
         geometry_msgs::Pose pose;
         transf t = mHand->getTran();

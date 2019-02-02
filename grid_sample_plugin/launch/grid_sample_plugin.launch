@@ -1,5 +1,14 @@
+<?xml version="1.0"?>
 <launch>
-   <arg name="render" default="true"/>
-<param name="Render" value="$(arg render)"/>
-  <node name="grid_sample_plugin" pkg="grid_sample_plugin" type="launch_graspit.sh" output="screen" />
+    <arg name="render" default="true"/>
+    <arg name="method" default="MC_Dropout"/>
+    <arg name="num_best_grasps" default="5"/>
+    <arg name="planner" default="Uniform"/>
+
+    <param name="Render" value="$(arg render)"/>
+    <param name="Method" type="string" value="$(arg method)"/>
+    <param name="Num_best_grasps" type="int" value="$(arg num_best_grasps)"/>
+    <param name="Planner" type="string" value="$(arg planner)"/>
+
+    <node name="grid_sample_plugin" pkg="grid_sample_plugin" type="launch_graspit.sh" output="screen" />
 </launch>
