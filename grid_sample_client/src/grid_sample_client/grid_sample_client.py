@@ -28,7 +28,6 @@ class GridSampleClient(object):
         goal = GridSampleGoal(resolution, sampling_type)
 
         client.send_goal_and_wait(goal)
-
         return client.get_result()
 
     @classmethod

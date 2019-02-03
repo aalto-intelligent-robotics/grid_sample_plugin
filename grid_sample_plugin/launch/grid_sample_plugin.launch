@@ -4,11 +4,13 @@
     <arg name="method" default="MC_Dropout"/>
     <arg name="num_best_grasps" default="5"/>
     <arg name="planner" default="Uniform"/>
+    <arg name="grasp_type" default="Epsilon"/>
 
     <param name="Render" value="$(arg render)"/>
     <param name="Method" type="string" value="$(arg method)"/>
     <param name="Num_best_grasps" type="int" value="$(arg num_best_grasps)"/>
     <param name="Planner" type="string" value="$(arg planner)"/>
+    <param name="GraspType" type="string" value="$(arg grasp_type)"/>
 
     <node name="grid_sample_plugin" pkg="grid_sample_plugin" type="launch_graspit.sh" output="screen" />
 </launch>
